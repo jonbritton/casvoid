@@ -1,8 +1,7 @@
 # Change Log
 
-All notable changes to the "casvoid" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+Changes to "casvoid" will be documented in this file.
+Fundamentally, in the first version, everything is new and therefore a change from the nothingness of the beforefore times.
 
 ## [Unreleased]
 
