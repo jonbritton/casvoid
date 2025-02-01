@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
 						panel.webview.postMessage({ command: 'chatResponse', text: responseText });
 					}
 				}
-				catch(err) { console.log(err) }
+				catch(err) { console.log(err); }
 			}
 		}) ;
 
@@ -69,14 +69,12 @@ function getWebViewContent(): string {
 
 			document.getElementById('askBtn').addEventListener('click', () => {
 				const text = document.getElementById('prompt').value;
-				console.log("Sending message to extension:", text);
 				vscode.postMessage({ command: 'chat', text }) ;
 			});
 
 			window.addEventListener('message', event => {
 				const { command, text } = event.data ;
 				if (command === 'chatResponse') {
-					//console.log("chatresponse:", text);
 					document.getElementById('response').innerText = text;
 				}
 			} )
